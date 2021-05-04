@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+  <section class="container">
+    <div class="one">
+      <p>"hallo"</p>
+    </div>
+    <div class="two">
+      <p>"tschuss"</p>
+    </div>
+  </section>
+ <div class="login">
+	<h1>Recommend products to customer!</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="csv" placeholder="Customer ID" required="required" />
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict now!</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+ <div class="login_2">
+	<h1>Recommend similar products!</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict_2')}}"method="post">
+    	<input type="text" name="csv_2" placeholder="Stock ID" required="required" />
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict now!</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text_2 }}
+
+ </div>
+
+
+</body>
+</html>
