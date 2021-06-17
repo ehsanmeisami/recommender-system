@@ -1,8 +1,6 @@
-# BC4: ManyGiftsUK recommender system
+# ManyGiftsUK Recommender System
 
-**Problem type:** Recommender System
-
-**Submission date:** 03-05-2021 | 11:59 pm
+**Problem type:** Recommender System (Implicit)
 
 ## General Context 
 
